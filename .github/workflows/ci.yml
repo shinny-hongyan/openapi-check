@@ -10,9 +10,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-      with:
-        submodules: true
-        lfs: true
 
     - name: Lint swagger file
       uses: crudo/spectral-action
