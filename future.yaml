@@ -24,7 +24,6 @@ servers:
 security:
   - bearerAuth: []
 
-
 paths:
   "/login":
     post:
