@@ -11,7 +11,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Lint swagger file
-      uses: crudo/spectral-action
+    - uses: actions/checkout@v2
+    - name: Validate OpenAPI definition
+      uses: char0n/swagger-editor-validate@v1
       with:
-        file_path: future.yaml
+        definition-file: future.yaml
