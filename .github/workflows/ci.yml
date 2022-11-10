@@ -1,7 +1,13 @@
 name: check
 
-on: [push]
-      
+on:  
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - *
+
 jobs:
   check-open-api:
 
@@ -10,9 +16,3 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-
-    - uses: actions/checkout@v2
-    - name: Validate OpenAPI definition
-      uses: char0n/swagger-editor-validate@v1
-      with:
-        definition-file: future.yaml
