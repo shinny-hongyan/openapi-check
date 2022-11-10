@@ -3,9 +3,9 @@ name: check
 on:
   pull_request:
   push:
+    tags:
     branches:
       - master
-  tags:
 
 jobs:
   check-open-api:
