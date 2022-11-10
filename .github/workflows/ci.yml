@@ -2,6 +2,10 @@ name: check
 
 on:
   pull_request:
+  push:
+    branches:
+      - master
+  tags:
 
 jobs:
   check-open-api:
