@@ -10,13 +10,3 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-
-    - name: Lint swagger file
-      uses: crudo/spectral-action
-      with:
-        file_path: future.yaml
-
-    - name: Lint swagger file 2
-      uses: crudo/spectral-action
-      with:
-        file_path: future2.yaml
